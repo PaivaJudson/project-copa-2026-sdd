@@ -1,0 +1,21 @@
+@* Aviso reutilizável para capacidades ainda não implementadas. *@
+<PageTitle>@Titulo · PortalCopa26</PageTitle>
+
+<section class="container py-4">
+    <h1 class="h3 mb-3">@Titulo</h1>
+    <div class="alert alert-info" role="status">
+        <strong>Funcionalidade ainda não implementada.</strong>
+        @if (!string.IsNullOrWhiteSpace(Descricao))
+        {
+            <span> @Descricao</span>
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Titulo { get; set; } = string.Empty;
+
+    [Parameter]
+    public string? Descricao { get; set; }
+}
