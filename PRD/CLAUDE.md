@@ -126,8 +126,8 @@ Utilizar sempre caminhos relativos.
 Exemplos:
 
 ```text
-./fontes
 ../prototipo
+../prototipo/fontes
 ```
 
 Evitar caminhos absolutos.
@@ -163,19 +163,33 @@ Não fazem parte da primeira versão:
 
 ## Dados Oficiais
 
-Os dados oficiais do torneio estão definidos nos arquivos da pasta:
+Os dados oficiais do torneio estão definidos nos arquivos da pasta (relativa a esta raiz):
 
 ```text
-./fontes
+../prototipo/fontes
 ```
 
-Arquivos oficiais:
+A aplicação lê uma cópia desses arquivos em `src/PortalCopa26/Data/Fontes`. Quando uma fonte mudar, atualize a cópia.
 
-- copa2026_cidades_sede_estadios.txt
-- copa2026_cabecas_chave.txt
-- copa2026_grupos.txt
-- copa2026_jogos_primeira_fase.txt
+Arquivos oficiais lidos pela carga inicial (SeedData):
+
+- copa2026_grupos.txt: grupos, potes e cabeças de chave
+- copa2026_pais_tecnicos.txt: técnicos
+- copa2026_selecoes_jogadores.txt: elencos
+- copa2026_cidades_sede_estadios.txt: estádios
+- copa2026_ranking_fifa.txt: ranking FIFA
+- copa2026_jogos_primeira_fase.txt: jogos da fase de grupos
+- copa2026_Jogos_Segunda_fase.txt
+- copa2026_jogos_oitavas.txt
+- copa2026_jogos_quartas.txt
+- copa2026_jogos_semifinal.txt
+- copa2026_jogo_terceiro_lugar.txt
+- copa2026_jogo_final.txt
+
+Arquivos de referência das regras (não carregados no banco):
+
 - copa2026_regras_negocio.txt
+- Copa2026_Regra_Terceiros_Colocados.txt
 - copa2026_fases.txt
 
 Ao implementar funcionalidades relacionadas ao torneio:
@@ -183,17 +197,20 @@ Ao implementar funcionalidades relacionadas ao torneio:
 - Não gerar dados fictícios
 - Não inventar confrontos
 - Não criar grupos não definidos
-- Utilizar exclusivamente os dados da pasta ./fontes
+- Utilizar exclusivamente os dados da pasta ../prototipo/fontes
 
-Dados oficiais previstos:
+Dados oficiais carregados:
 
 - 48 seleções
 - 12 grupos
 - 16 estádios
-- 6 fases
+- 1.238 jogadores
+- 7 fases (grupos, segunda fase, oitavas, quartas, semifinais, 3º lugar e final)
 - 72 jogos na fase de grupos
-- 102 jogos no total do torneio
-- Ranking FIFA
+- 104 jogos no total do torneio (72 + 16 + 8 + 4 + 2 + 1 + 1)
+- Ranking FIFA (98 posições, incluindo seleções que não participam da Copa)
+
+Os horários dos jogos nas fontes estão em horário de Brasília (UTC-03:00).
 
 Bandeiras e logotipos poderão ser obtidos através das APIs públicas da FIFA.
 
@@ -210,17 +227,17 @@ As mudanças devem:
 - Priorizar componentes reutilizáveis
 - Evitar alterações não relacionadas ao objetivo da change
 - Seguir as diretrizes definidas neste documento
-- Utilizar as informações da pasta ./fontes como fonte oficial dos dados do torneio
+- Utilizar as informações da pasta ../prototipo/fontes como fonte oficial dos dados do torneio
 
 ## Documentação Complementar
 
 Antes de implementar funcionalidades relacionadas ao domínio da Copa, consultar:
 
-- ./docs/RegrasCopa2026.md
-- ./docs/EstruturaDados.md
+- ../prototipo/docs/PRD.md
+- ../prototipo/fontes/copa2026_regras_negocio.txt
 
 Antes de utilizar dados do torneio, consultar os arquivos da pasta:
 
-- ./fontes
+- ../prototipo/fontes
 
 Os arquivos da pasta fontes são a fonte oficial dos dados da Copa do Mundo 2026.
