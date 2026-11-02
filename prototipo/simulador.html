@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador — PortalCopa26</title>
+  <meta name="description" content="Simule os resultados da Fase de Grupos da Copa do Mundo 2026.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="simulador">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Simulador</h1>
+      <p>Informe os placares da Fase de Grupos e acompanhe a classificação recalculada em tempo real. A simulação fica salva neste navegador.</p>
+    </div>
+  </section>
+  <div class="container">
+    <div class="tabs" id="tabs-grupos"></div>
+    <div class="sim-acoes">
+      <button class="btn" id="btn-simular-grupo" type="button">🎲 Simular este grupo</button>
+      <button class="btn btn-amarelo" id="btn-simular-todos" type="button">🎲 Simular todos os grupos</button>
+      <button class="btn btn-claro" id="btn-limpar-grupo" type="button">Limpar grupo</button>
+      <button class="btn btn-perigo" id="btn-limpar-todos" type="button">Limpar tudo</button>
+      <span class="muted small" id="sim-progresso" style="align-self:center"></span>
+    </div>
+
+    <div class="sim-layout">
+      <section class="card">
+        <div class="card-pad" style="padding-bottom:0"><div class="sim-grupo-titulo"><h2 id="sim-titulo">Grupo A</h2><span class="muted small">Placares</span></div></div>
+        <div id="sim-jogos"></div>
+      </section>
+      <section class="card card-pad">
+        <div class="sim-grupo-titulo"><h2>Classificação</h2><a class="small" href="grupos.html">Ver todos os grupos →</a></div>
+        <div id="legenda"></div>
+        <div id="sim-classificacao"></div>
+      </section>
+    </div>
+
+    <section class="secao">
+      <div class="secao-head"><h2>Melhores terceiros colocados</h2><span class="muted">8 de 12 avançam</span></div>
+      <div class="card" id="sim-terceiros"></div>
+    </section>
+
+    <section class="secao">
+      <h2>Classificados à Segunda Fase</h2>
+      <div id="sim-classificados"></div>
+    </section>
+
+    <section class="secao card card-pad regras" id="regras"></section>
+  </div>
+</main>
+</body>
+</html>

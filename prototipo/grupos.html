@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos — PortalCopa26</title>
+  <meta name="description" content="Grupos e classificação da Copa do Mundo 2026.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="grupos">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Grupos</h1>
+      <p>Os 12 grupos da Copa do Mundo 2026 e a classificação de cada um.</p>
+    </div>
+  </section>
+  <div class="container">
+    <div class="tabs" id="fonte-resultados" role="tablist">
+      <button class="ativo" data-fonte="oficial" type="button">Resultados oficiais</button>
+      <button data-fonte="simulacao" type="button">Minha simulação</button>
+    </div>
+    <div id="info-resultados"></div>
+    <div id="legenda"></div>
+    <div class="grupos-grid" id="grupos"></div>
+
+    <section class="secao">
+      <div class="secao-head"><h2>Ranking dos terceiros colocados</h2><span class="muted">Os 8 melhores avançam à Segunda Fase</span></div>
+      <div class="card" id="terceiros"></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

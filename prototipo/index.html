@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortalCopa26 — Copa do Mundo FIFA 2026</title>
+  <meta name="description" content="Jogos, grupos, seleções, ranking FIFA e simulador da Copa do Mundo 2026.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="home">
+<main>
+  <section class="hero">
+    <div class="container">
+      <img class="hero-logo" src="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023" alt="Logo da Copa do Mundo FIFA 2026">
+      <div class="hero-texto">
+        <h1>Portal<b>Copa26</b></h1>
+        <p class="subtitulo">Tudo sobre a Copa do Mundo FIFA 2026: jogos, grupos, seleções, ranking FIFA e simulador de resultados.</p>
+        <div class="hero-sedes" id="hero-sedes" aria-label="Países-sede"></div>
+        <div class="hero-acoes">
+          <a class="btn btn-amarelo" href="jogos.html">Ver jogos</a>
+          <a class="btn btn-claro" href="simulador.html">Simular resultados</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats" id="stats"></div>
+
+    <section class="secao">
+      <div class="secao-head"><h2 id="proximos-titulo">Próximos jogos</h2><a href="jogos.html">Todos os jogos →</a></div>
+      <div id="proximos-aviso"></div>
+      <div class="jogos-grid" id="proximos"></div>
+    </section>
+
+    <section class="secao">
+      <div class="secao-head"><h2>Países-sede</h2><span class="muted">Primeira Copa com três países-sede</span></div>
+      <div class="sedes-grid" id="sedes"></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

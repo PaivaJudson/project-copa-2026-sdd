@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipes — PortalCopa26</title>
+  <meta name="description" content="As 48 seleções participantes da Copa do Mundo 2026 e seus elencos.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="equipes">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Equipes</h1>
+      <p>As 48 seleções participantes. Selecione uma equipe para ver grupo, técnico e elenco.</p>
+    </div>
+  </section>
+  <div class="container">
+    <section class="equipe-detalhe" id="detalhe-equipe" hidden></section>
+    <div class="filtros">
+      <label>Buscar seleção <input type="search" id="busca-equipe" placeholder="Ex.: Brasil"></label>
+    </div>
+    <div id="lista-equipes"></div>
+  </div>
+</main>
+</body>
+</html>

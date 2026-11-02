@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos — PortalCopa26</title>
+  <meta name="description" content="Todos os jogos da Copa do Mundo 2026 ordenados por data.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="jogos">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Jogos</h1>
+      <p>Todas as partidas da Copa do Mundo 2026, ordenadas por data e agrupadas por dia (horário de Brasília).</p>
+      <div class="acoes"><a class="btn btn-amarelo" href="grupos.html">Ver grupos</a></div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="filtros">
+      <label>Fase <select id="filtro-fase"></select></label>
+      <label>Grupo <select id="filtro-grupo"></select></label>
+      <label>Seleção <select id="filtro-selecao"></select></label>
+      <button class="btn btn-claro" id="limpar-filtros" type="button">Limpar filtros</button>
+      <span class="muted" id="total-jogos"></span>
+    </div>
+    <div id="lista-dias"></div>
+  </div>
+</main>
+</body>
+</html>

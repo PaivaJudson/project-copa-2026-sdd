@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking FIFA — PortalCopa26</title>
+  <meta name="description" content="Ranking FIFA de seleções.">
+  <link rel="icon" href="https://api.fifa.com/api/v3/picture/tournaments-sq-4/285023">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body data-page="ranking">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Ranking FIFA</h1>
+      <p>Posição e pontuação das seleções no ranking FIFA. Seleções classificadas para a Copa 2026 aparecem em destaque.</p>
+    </div>
+  </section>
+  <div class="container">
+    <div class="filtros">
+      <label>Buscar seleção <input type="search" id="busca-ranking" placeholder="Ex.: Argentina"></label>
+      <label style="flex-direction:row;align-items:center;gap:8px;padding-bottom:8px"><input type="checkbox" id="so-copa"> Somente seleções da Copa 2026</label>
+    </div>
+    <div class="card" id="ranking"></div>
+    <p class="muted small" id="fora-ranking"></p>
+  </div>
+</main>
+</body>
+</html>
